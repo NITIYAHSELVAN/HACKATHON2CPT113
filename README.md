@@ -1,3 +1,4 @@
+
 # HACKATHON2CPT113
 Hackathon Scenario As a game developer, you are given the task of producing a complete text-based video game. You need to build the game entirely in C++. The game can be of any genre, ranging from role-playing to multiplayer card games. Your program must include the use of linked lists or any of its variations like stacks or queues.
 # Description
@@ -52,7 +53,8 @@ Remember that the gameplay experience may vary depending on the platform or C++ 
 
 7. Modularity: Modularity promotes dividing the code into smaller, manageable units (classes) that can be developed, tested, and maintained independently. Each class in the code represents a specific module with well-defined responsibilities, facilitating code organization and maintainability.
 
-By incorporating these object-oriented concepts, the code for "DANGER AHEAD" achieves better organization, reusability, and extensibility, making it easier to understand, modify, and expand the game's functionality.
+By incorporating these object-oriented concepts, the code for "DANGER AHEAD" achieves better organization, reusability, and extensibility, making it easier to underst![Uploading IF ENTERED CAVE .png…]()
+and, modify, and expand the game's functionality.
 
 
 # How linked lists play a role in your game.
@@ -61,3 +63,7 @@ Managing inventory: Linked lists can be employed to create a dynamic inventory s
 Building story or dialogue branches: Linked lists can be utilized to create branching paths within the game's story or dialogue. Each node in the linked list can represent a different story segment or dialogue option, allowing the player to progress through the game by traversing the linked list based on their choices.
 
 Implementing game events or scenes: Linked lists can be used to organize and manage game events or scenes. Each node in the linked list can represent a specific event or scene, enabling sequential execution or jumping between different parts of the game based on certain conditions.
+
+# SCRENSHOOT
+![GAME START](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/7211f3c8-4c17-49ee-9912-523851e80284)
+
