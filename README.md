@@ -53,7 +53,7 @@ Remember that the gameplay experience may vary depending on the platform or C++ 
 
 7. Modularity: Modularity promotes dividing the code into smaller, manageable units (classes) that can be developed, tested, and maintained independently. Each class in the code represents a specific module with well-defined responsibilities, facilitating code organization and maintainability.
 
-By incorporating these object-oriented concepts, the code for "DANGER AHEAD" achieves better organization, reusability, and extensibility, making it easier to underst![Uploading IF ENTERED CAVE .png…]()
+By incorporating these object-oriented concepts, the code for "DANGER AHEAD" achieves better organization, reusability, and extensibility, making it easier to underst![IF ENTERED CAVE ](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/a4901710-4761-4ad4-994f-ef3641cf8777)
 and, modify, and expand the game's functionality.
 
 
@@ -66,4 +66,19 @@ Implementing game events or scenes: Linked lists can be used to organize and man
 
 # SCRENSHOOT
 ![GAME START](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/7211f3c8-4c17-49ee-9912-523851e80284)
+![GAME EXPLAINATION](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/a114db00-0c8f-40dc-84e5-ed184a2655c4)
+![GAME EXPLAINATION](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/a396d762-8238-49df-aff8-e7054f59a73d)
+![FIRST OPTION(WATER BOTTLE)](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/a3f9ce69-726d-40e6-9f76-76e8668134be)
+![IF PICKED WATER BOTTLE](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/33e456d8-cb05-484c-b36b-23e88112f7fb)
+![IF ENTERED CAVE ](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/df31c547-f8fb-4f2e-b32c-9092436ff71f)
+![DID NOT ENTERED CAVE](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/3a4cc433-32d5-48ab-a54d-27508f63b821)
+![IF RUN FROM TIGER](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/b6ad1594-f8ce-4d9b-8b88-036766b9904e)
+![IF HIDE FROM TIGER](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/74988ce6-a9c3-4d7d-83ac-ebddbc7e8b46)
+![IF YOU TAKE WATER](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/eaa6b683-02e5-4460-bde6-f4316d4db1e0)
+![IF TAKE GUN](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/c83d3d43-40df-44e1-b23d-6bf311983741)
+![IF YOU SHOT THE BEAR](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/5eeb50be-fff5-4b8f-af81-e8c2e7a01c51)
+![IF DRANK WATER ](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/de2264c9-03f7-4ee7-946a-29200139806d)
+![RESTART THE GAME](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/bf8d90be-fa2f-40d8-9337-4f158f481f0f)
+
+
 
