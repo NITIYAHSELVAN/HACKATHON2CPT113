@@ -1,4 +1,4 @@
-# Intro.cpp
+
 %%writefile Intro.cpp
 #include "Intro.h"
 #include <iostream>
