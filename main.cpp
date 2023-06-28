@@ -19,6 +19,13 @@ int main()
     Scene scene;
     Item* inventory = nullptr;
 
+     // Open the inventory log file
+    ofstream inventoryLog("inventory_log.txt");
+    if (!inventoryLog.is_open()) {
+        cout << "Error opening inventory log file." << endl;
+        return 1;
+    }
+
 
     cout << "    //DANGER AHEAD// \n\n";
     cout << "   WANT TO START GAME?\n";
@@ -36,9 +43,9 @@ int main()
 
         //Start story
         chap.chapterDisplay1();
-        addToInventory(inventory, "Phone");
-        addToInventory(inventory, "Food");
-        addToInventory(inventory, "Torch");
+        addToInventory(inventory, "Phone", inventoryLog);
+        addToInventory(inventory, "Food", inventoryLog);
+        addToInventory(inventory, "Torch", inventoryLog);
 
         displayInventory(inventory);
 
@@ -52,8 +59,8 @@ int main()
 
           if (choice == '0')
 		    {
-              removeFromInventory(inventory, "Food" );
-              addToInventory(inventory, "Water Bottle");
+              removeFromInventory(inventory, "Food", inventoryLog );
+              addToInventory(inventory, "Water Bottle", inventoryLog);
               displayInventory(inventory);
               select.choiceDisplay2();      //Situation Cave
               cin >> choice;
@@ -70,11 +77,11 @@ int main()
 
                         if (choice == '0')
                         {
-                            removeFromInventory(inventory, "Phone" );
-                            addToInventory(inventory, "Rope");
+                            removeFromInventory(inventory, "Phone" , inventoryLog );
+                            addToInventory(inventory, "Rope", inventoryLog);
                             displayInventory(inventory);
                             chap.chapterDisplay2();  //Circumstance save
-                            removeFromInventory(inventory, "Rope" );
+                            removeFromInventory(inventory, "Rope" , inventoryLog );
                             displayInventory(inventory);
                             cout << "Congratulations! You have reached the halfway point of the game.\n";
                             cout << "Press (Enter) to continue.\n";
@@ -95,7 +102,7 @@ int main()
 
                                             if (choice == '0')
                                             {
-                                                addToInventory(inventory, "Shotgun");
+                                                addToInventory(inventory, "Shotgun", inventoryLog);
                                                 displayInventory(inventory);
                                                 select.choiceDisplay8(); // Situation Bear
                                                 cin >> choice;
@@ -103,7 +110,7 @@ int main()
                                                     if (choice == '0')
                                                     {
                                                         chap.chapterDisplay3();
-                                                        removeFromInventory(inventory, "Shotgun");
+                                                        removeFromInventory(inventory, "Shotgun" , inventoryLog);
                                                         displayInventory(inventory);
                                                         cin.ignore();
                                                         cin.get();
@@ -151,7 +158,7 @@ int main()
 
                                             if (choice == '0')
                                             {
-                                                addToInventory(inventory, "Shotgun");
+                                                addToInventory(inventory, "Shotgun", inventoryLog);
                                                 displayInventory(inventory);
                                                 select.choiceDisplay8(); // Situation Bear
                                                 cin >> choice;
@@ -159,7 +166,7 @@ int main()
                                                     if (choice == '0')
                                                     {
                                                         chap.chapterDisplay3();
-                                                        removeFromInventory(inventory, "Shotgun");
+                                                        removeFromInventory(inventory, "Shotgun", inventoryLog);
                                                         displayInventory(inventory);
                                                         cin.ignore();
                                                         cin.get();
@@ -234,11 +241,11 @@ int main()
 
                         if (choice == '0')
                         {
-                            removeFromInventory(inventory, "Phone" );
-                            addToInventory(inventory, "Rope");
+                            removeFromInventory(inventory, "Phone" , inventoryLog );
+                            addToInventory(inventory, "Rope", inventoryLog);
                             displayInventory(inventory);
                             chap.chapterDisplay2();  //Circumstance save
-                            removeFromInventory(inventory, "Rope" );
+                            removeFromInventory(inventory, "Rope" , inventoryLog );
                             displayInventory(inventory);
                             cout << "Congratulations! You have reached the halfway point of the game.\n";
                             cout << "Press (Enter) to continue.\n";
@@ -259,7 +266,7 @@ int main()
 
                                             if (choice == '0')
                                             {
-                                                addToInventory(inventory, "Shotgun");
+                                                addToInventory(inventory, "Shotgun", inventoryLog);
                                                 displayInventory(inventory);
                                                 select.choiceDisplay8(); // Situation Bear
                                                 cin >> choice;
@@ -267,7 +274,7 @@ int main()
                                                     if (choice == '0')
                                                     {
                                                         chap.chapterDisplay3();
-                                                        removeFromInventory(inventory, "Shotgun");
+                                                        removeFromInventory(inventory, "Shotgun", inventoryLog);
                                                         displayInventory(inventory);
                                                         cin.ignore();
                                                         cin.get();
@@ -315,7 +322,7 @@ int main()
 
                                             if (choice == '0')
                                             {
-                                                addToInventory(inventory, "Shotgun");
+                                                addToInventory(inventory, "Shotgun", inventoryLog);
                                                 displayInventory(inventory);
                                                 select.choiceDisplay8(); // Situation Bear
                                                 cin >> choice;
@@ -323,7 +330,7 @@ int main()
                                                     if (choice == '0')
                                                     {
                                                         chap.chapterDisplay3();
-                                                        removeFromInventory(inventory, "Shotgun");
+                                                        removeFromInventory(inventory, "Shotgun", inventoryLog);
                                                         displayInventory(inventory);
                                                         cin.ignore();
                                                         cin.get();
@@ -404,8 +411,21 @@ cout << "\n";
         cout << "Thank you for playing!\n";
     }
 
+    // Close the inventory log file
+    inventoryLog.close();
+
+    // Free memory used by inventory linked list
+    Item* current = inventory;
+    while (current != nullptr) {
+        Item* next = current->next;
+        delete current;
+        current = next;
+    }
+
     return 0;
 }
+
+
 
 
 
