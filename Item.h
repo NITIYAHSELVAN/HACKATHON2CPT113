@@ -1,6 +1,6 @@
 
-%%writefile Item.h
 #include <iostream>
+#include <fstream>
 #include <string>
 using namespace std;
 
@@ -24,7 +24,7 @@ void displayInventory(Item* inventory)
     cout << endl;
 }
 
-void addToInventory(Item*& inventory, const string& itemName)
+void addToInventory(Item*& inventory, const string& itemName, ofstream& file)
 {
     Item* newItem = new Item;
     newItem->name = itemName;
@@ -43,9 +43,12 @@ void addToInventory(Item*& inventory, const string& itemName)
     }
 
     cout << "You have " << itemName << "." << endl;
+
+    // Write inventory change to the file
+    file << "Added: " << itemName << endl;
 }
 
-void removeFromInventory(Item*& inventory, const string& itemName)
+void removeFromInventory(Item*& inventory, const string& itemName, ofstream& file)
 {
     if (inventory == nullptr) {
         cout << "Inventory is empty." << endl;
@@ -58,6 +61,9 @@ void removeFromInventory(Item*& inventory, const string& itemName)
         inventory = inventory->next;
         delete temp;
         cout << itemName << " removed from inventory." << endl;
+
+        // Write inventory change to the file
+        file << "Removed: " << itemName << endl;
         return;
     }
 
@@ -69,6 +75,9 @@ void removeFromInventory(Item*& inventory, const string& itemName)
             current->next = current->next->next;
             delete temp;
             cout << itemName << " removed from inventory." << endl;
+
+            // Write inventory change to the file
+            file << "Removed: " << itemName << endl;
             return;
         }
         current = current->next;
