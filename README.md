@@ -3,8 +3,13 @@
 #GROUP 21
 # GROUP MEMBERS
 NITIYAH SELVAN A/L P.SURESH(164447)
+
+
 MUVENDDRAN A/L SARAVANAN(164384)
+
 NANDAN A/L YOGALINGAM (164125)
+
+
 Hackathon Scenario As a game developer, you are given the task of producing a complete text-based video game. You need to build the game entirely in C++. The game can be of any genre, ranging from role-playing to multiplayer card games. Your program must include the use of linked lists or any of its variations like stacks or queues.
 # Description
 "DANGER AHEAD" is a text-based game where players embark on a thrilling survival journey filled with dangerous situations and critical choices. The game's code, provided above, implements the gameplay mechanics and interactions.
@@ -62,11 +67,19 @@ By incorporating these object-oriented concepts, the code for "DANGER AHEAD" ach
 
 
 # How linked lists play a role in your game.
-Managing inventory: Linked lists can be employed to create a dynamic inventory system where items are stored and managed. Each item could be represented as a node in the linked list, allowing for efficient insertion, deletion, and traversal of items.
+In the provided code for the game, linked lists are used to implement the player's inventory system. The `Item` struct represents an item in the inventory, and it contains a pointer to the next item in the list. The linked list is built by connecting the items using these pointers.
 
-Building story or dialogue branches: Linked lists can be utilized to create branching paths within the game's story or dialogue. Each node in the linked list can represent a different story segment or dialogue option, allowing the player to progress through the game by traversing the linked list based on their choices.
+Here's how linked lists play a role in the game:
 
-Implementing game events or scenes: Linked lists can be used to organize and manage game events or scenes. Each node in the linked list can represent a specific event or scene, enabling sequential execution or jumping between different parts of the game based on certain conditions.
+1. **Adding Items to Inventory:** When the player acquires a new item, such as a water bottle or a rope, the `addToInventory` function is called. It creates a new `Item` object, assigns the item's name to it, and sets its `next` pointer to `nullptr`. If the inventory is empty, the new item becomes the head of the list. Otherwise, it is added to the end of the list by traversing the existing items and updating the `next` pointers accordingly.
+
+2. **Removing Items from Inventory:** If the player wants to remove an item from their inventory, the `removeFromInventory` function is called. It checks if the inventory is empty and if the first item matches the item to be removed. If so, it adjusts the `next` pointers to remove the item from the list. If the item is not the first one, it traverses the list to find the item and updates the `next` pointers to bypass the item, effectively removing it from the list.
+
+3. **Displaying Inventory:** The `displayInventory` function traverses the linked list and prints the names of the items in the inventory. It starts from the head of the list and follows the `next` pointers until reaching the end, printing each item along the way.
+
+4. **Checking Inventory:** The `checkInventory` function is used to determine if a specific item is present in the inventory. It traverses the linked list and compares the names of the items with the desired item. If a match is found, it returns `true`, indicating that the item is present. Otherwise, it returns `false`.
+
+By using a linked list to implement the inventory system, the game can dynamically add and remove items as needed. It allows for efficient storage and retrieval of items, as well as easy traversal and manipulation of the inventory.
 
 # SCRENSHOOT
 ![GAME START](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/7211f3c8-4c17-49ee-9912-523851e80284)
