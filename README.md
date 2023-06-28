@@ -53,8 +53,7 @@ Remember that the gameplay experience may vary depending on the platform or C++ 
 
 7. Modularity: Modularity promotes dividing the code into smaller, manageable units (classes) that can be developed, tested, and maintained independently. Each class in the code represents a specific module with well-defined responsibilities, facilitating code organization and maintainability.
 
-By incorporating these object-oriented concepts, the code for "DANGER AHEAD" achieves better organization, reusability, and extensibility, making it easier to underst![IF ENTERED CAVE ](https://github.com/NITIYAHSELVAN/HACKATHON2CPT113/assets/137810539/a4901710-4761-4ad4-994f-ef3641cf8777)
-and, modify, and expand the game's functionality.
+By incorporating these object-oriented concepts, the code for "DANGER AHEAD" achieves better organization, reusability, and extensibility, making it easier to understand, modify, and expand the game's functionality.
 
 
 # How linked lists play a role in your game.
